@@ -3,4 +3,5 @@ export interface ScenarioToTriggerCreate {
     description?: string;
     scenarioId?: string;
     triggerId?: string;
+    enabled?: boolean;
 }

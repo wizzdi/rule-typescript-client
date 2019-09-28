@@ -3,4 +3,5 @@ export interface ScenarioToActionCreate {
     description?: string;
     scenarioId?: string;
     actionId?: string;
+    enabled?: boolean;
 }

@@ -17,4 +17,5 @@ import { ScenarioTrigger } from './scenarioTrigger';
 export interface ScenarioToTrigger extends Baseclass { 
     scenario?: Scenario;
     scenarioTrigger?: ScenarioTrigger;
+    enabled?:boolean;
 }
