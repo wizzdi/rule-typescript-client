@@ -40,3 +40,4 @@ export * from './scenarioTriggerCreate';
 export * from './scenarioTriggerFilter';
 export * from './scenarioTriggerUpdate';
 export * from './scenarioUpdate';
+export * from './fireScenarioTrigger';

@@ -63,6 +63,32 @@ let ScenarioTriggerService = class ScenarioTriggerService {
             reportProgress: reportProgress
         }).map(o => fc_client_1.FlexiCoreDecycle.retrocycle(o));
     }
+    fireTrigger(body, authenticationKey, observe = 'body', reportProgress = false) {
+        let headers = this.defaultHeaders;
+        if (authenticationKey !== undefined && authenticationKey !== null) {
+            headers = headers.set('authenticationKey', String(authenticationKey));
+        }
+        let httpHeaderAccepts = [
+            'application/json'
+        ];
+        const httpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        if (httpHeaderAcceptSelected != undefined) {
+            headers = headers.set('Accept', httpHeaderAcceptSelected);
+        }
+        const consumes = [
+            'application/json'
+        ];
+        const httpContentTypeSelected = this.configuration.selectHeaderContentType(consumes);
+        if (httpContentTypeSelected != undefined) {
+            headers = headers.set('Content-Type', httpContentTypeSelected);
+        }
+        return this.httpClient.post(`${this.basePath}/plugins/ScenarioTrigger/fireTrigger`, body, {
+            withCredentials: this.configuration.withCredentials,
+            headers: headers,
+            observe: observe,
+            reportProgress: reportProgress
+        }).map(o => fc_client_1.FlexiCoreDecycle.retrocycle(o));
+    }
     getAllScenarioTrigger(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
         if (authenticationKey !== undefined && authenticationKey !== null) {

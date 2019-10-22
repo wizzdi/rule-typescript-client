@@ -6,6 +6,7 @@ import { ScenarioTriggerUpdate } from '../model/scenarioTriggerUpdate';
 import { Configuration } from '../configuration';
 import { ScenarioTriggerFilter } from '../model/scenarioTriggerFilter';
 import { PaginationResponse } from '@hanoch/fc_client';
+import { FireScenarioTrigger } from '../model/fireScenarioTrigger';
 export declare class ScenarioTriggerService {
     protected httpClient: HttpClient;
     protected basePath: string;
@@ -16,6 +17,9 @@ export declare class ScenarioTriggerService {
     createScenarioTrigger(body?: ScenarioTriggerCreate, authenticationKey?: string, observe?: 'body', reportProgress?: boolean): Observable<ScenarioTrigger>;
     createScenarioTrigger(body?: ScenarioTriggerCreate, authenticationKey?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<ScenarioTrigger>>;
     createScenarioTrigger(body?: ScenarioTriggerCreate, authenticationKey?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<ScenarioTrigger>>;
+    fireTrigger(body?: FireScenarioTrigger, authenticationKey?: string, observe?: 'body', reportProgress?: boolean): Observable<void>;
+    fireTrigger(body?: FireScenarioTrigger, authenticationKey?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<void>>;
+    fireTrigger(body?: FireScenarioTrigger, authenticationKey?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<void>>;
     getAllScenarioTrigger(body?: ScenarioTriggerFilter, authenticationKey?: string, observe?: 'body', reportProgress?: boolean): Observable<PaginationResponse<ScenarioTrigger>>;
     getAllScenarioTrigger(body?: ScenarioTriggerFilter, authenticationKey?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<PaginationResponse<ScenarioTrigger>>>;
     getAllScenarioTrigger(body?: ScenarioTriggerFilter, authenticationKey?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<PaginationResponse<ScenarioTrigger>>>;

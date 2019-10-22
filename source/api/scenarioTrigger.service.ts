@@ -24,6 +24,7 @@ import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables'
 import { Configuration }                                     from '../configuration';
 import { ScenarioTriggerFilter } from '../model/scenarioTriggerFilter';
 import { PaginationResponse, FlexiCoreDecycle } from '@hanoch/fc_client';
+import { FireScenarioTrigger } from '../model/fireScenarioTrigger';
 
 
 @Injectable()
@@ -97,6 +98,47 @@ export class ScenarioTriggerService {
         }
 
         return this.httpClient.post<ScenarioTrigger>(`${this.basePath}/plugins/ScenarioTrigger/createScenarioTrigger`,
+            body,
+            {
+                withCredentials: this.configuration.withCredentials,
+                headers: headers,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        ).map(o=>FlexiCoreDecycle.retrocycle(o));
+    }
+
+    public fireTrigger(body?: FireScenarioTrigger, authenticationKey?: string, observe?: 'body', reportProgress?: boolean): Observable<void>;
+    public fireTrigger(body?: FireScenarioTrigger, authenticationKey?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<void>>;
+    public fireTrigger(body?: FireScenarioTrigger, authenticationKey?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<void>>;
+    public fireTrigger(body?: FireScenarioTrigger, authenticationKey?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+
+
+
+        let headers = this.defaultHeaders;
+        if (authenticationKey !== undefined && authenticationKey !== null) {
+            headers = headers.set('authenticationKey', String(authenticationKey));
+        }
+
+        // to determine the Accept header
+        let httpHeaderAccepts: string[] = [
+            'application/json'
+        ];
+        const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        if (httpHeaderAcceptSelected != undefined) {
+            headers = headers.set('Accept', httpHeaderAcceptSelected);
+        }
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+            'application/json'
+        ];
+        const httpContentTypeSelected: string | undefined = this.configuration.selectHeaderContentType(consumes);
+        if (httpContentTypeSelected != undefined) {
+            headers = headers.set('Content-Type', httpContentTypeSelected);
+        }
+
+        return this.httpClient.post<void>(`${this.basePath}/plugins/ScenarioTrigger/fireTrigger`,
             body,
             {
                 withCredentials: this.configuration.withCredentials,
