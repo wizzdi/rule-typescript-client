@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const rules_service_1 = require("./rules.service");
 exports.RulesService = rules_service_1.RulesService;
+const ruleArgument_service_1 = require("./ruleArgument.service");
+exports.RuleArgumentService = ruleArgument_service_1.RuleArgumentService;
 const ruleToArgument_service_1 = require("./ruleToArgument.service");
 exports.RuleToArgumentService = ruleToArgument_service_1.RuleToArgumentService;
 const scenario_service_1 = require("./scenario.service");
@@ -40,5 +42,5 @@ exports.TokenBasedService = fc_client_1.TokenBasedService;
 exports.APIS = [fc_client_1.AuthenticationService, fc_client_1.BaseclassesService, fc_client_1.CategoriesService, fc_client_1.ClazzService, fc_client_1.CoreService,
     fc_client_1.DebugService, fc_client_1.DevicesService, fc_client_1.DocumnetationService, fc_client_1.DownloadService, fc_client_1.DynamicPropertiesService,
     fc_client_1.LicenseService, fc_client_1.MediaService, fc_client_1.PluginsService, fc_client_1.RolesService, fc_client_1.SettingsService, fc_client_1.TenantsService, fc_client_1.TestService,
-    fc_client_1.UIPluginService, fc_client_1.UploadService, fc_client_1.UsersService, fc_client_1.ViewsService, fc_client_1.TokenBasedService, rules_service_1.RulesService, ruleToArgument_service_1.RuleToArgumentService, scenario_service_1.ScenarioService, scenarioAction_service_1.ScenarioActionService, scenarioToAction_service_1.ScenarioToActionService, scenarioToTrigger_service_1.ScenarioToTriggerService, scenarioTrigger_service_1.ScenarioTriggerService,];
+    fc_client_1.UIPluginService, fc_client_1.UploadService, fc_client_1.UsersService, fc_client_1.ViewsService, fc_client_1.TokenBasedService, rules_service_1.RulesService, ruleArgument_service_1.RuleArgumentService, ruleToArgument_service_1.RuleToArgumentService, scenario_service_1.ScenarioService, scenarioAction_service_1.ScenarioActionService, scenarioToAction_service_1.ScenarioToActionService, scenarioToTrigger_service_1.ScenarioToTriggerService, scenarioTrigger_service_1.ScenarioTriggerService,];
 //# sourceMappingURL=api.js.map
