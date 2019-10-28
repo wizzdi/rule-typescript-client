@@ -1,4 +1,4 @@
-import { FilteringInformationHolder } from '@hanoch/fc_client';
+import { FilteringInformationHolder } from '@flexicore/flexicore-client';
 export interface RuleLinkFilter extends FilteringInformationHolder {
     ruleOpsIds?: Array<string>;
 }

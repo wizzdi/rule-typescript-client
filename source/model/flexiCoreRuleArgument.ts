@@ -1,4 +1,4 @@
-import { Baseclass, ExecutionParametersHolder, DynamicExecution } from "@hanoch/fc_client";
+import { Baseclass, ExecutionParametersHolder, DynamicExecution } from "@flexicore/flexicore-client";
 
 /**
  * REST API for Flexicore filtered by your access rights

@@ -5,7 +5,7 @@ import { ScenarioTriggerCreate } from '../model/scenarioTriggerCreate';
 import { ScenarioTriggerUpdate } from '../model/scenarioTriggerUpdate';
 import { Configuration } from '../configuration';
 import { ScenarioTriggerFilter } from '../model/scenarioTriggerFilter';
-import { PaginationResponse } from '@hanoch/fc_client';
+import { PaginationResponse } from '@flexicore/flexicore-client';
 import { FireScenarioTrigger } from '../model/fireScenarioTrigger';
 export declare class ScenarioTriggerService {
     protected httpClient: HttpClient;

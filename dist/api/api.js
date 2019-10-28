@@ -14,31 +14,31 @@ const scenarioToTrigger_service_1 = require("./scenarioToTrigger.service");
 exports.ScenarioToTriggerService = scenarioToTrigger_service_1.ScenarioToTriggerService;
 const scenarioTrigger_service_1 = require("./scenarioTrigger.service");
 exports.ScenarioTriggerService = scenarioTrigger_service_1.ScenarioTriggerService;
-const fc_client_1 = require("@hanoch/fc_client");
-exports.AuthenticationService = fc_client_1.AuthenticationService;
-exports.BaseclassesService = fc_client_1.BaseclassesService;
-exports.CategoriesService = fc_client_1.CategoriesService;
-exports.ClazzService = fc_client_1.ClazzService;
-exports.CoreService = fc_client_1.CoreService;
-exports.DebugService = fc_client_1.DebugService;
-exports.DevicesService = fc_client_1.DevicesService;
-exports.DocumnetationService = fc_client_1.DocumnetationService;
-exports.DownloadService = fc_client_1.DownloadService;
-exports.DynamicPropertiesService = fc_client_1.DynamicPropertiesService;
-exports.LicenseService = fc_client_1.LicenseService;
-exports.MediaService = fc_client_1.MediaService;
-exports.PluginsService = fc_client_1.PluginsService;
-exports.RolesService = fc_client_1.RolesService;
-exports.SettingsService = fc_client_1.SettingsService;
-exports.TenantsService = fc_client_1.TenantsService;
-exports.TestService = fc_client_1.TestService;
-exports.UIPluginService = fc_client_1.UIPluginService;
-exports.UploadService = fc_client_1.UploadService;
-exports.UsersService = fc_client_1.UsersService;
-exports.ViewsService = fc_client_1.ViewsService;
-exports.TokenBasedService = fc_client_1.TokenBasedService;
-exports.APIS = [fc_client_1.AuthenticationService, fc_client_1.BaseclassesService, fc_client_1.CategoriesService, fc_client_1.ClazzService, fc_client_1.CoreService,
-    fc_client_1.DebugService, fc_client_1.DevicesService, fc_client_1.DocumnetationService, fc_client_1.DownloadService, fc_client_1.DynamicPropertiesService,
-    fc_client_1.LicenseService, fc_client_1.MediaService, fc_client_1.PluginsService, fc_client_1.RolesService, fc_client_1.SettingsService, fc_client_1.TenantsService, fc_client_1.TestService,
-    fc_client_1.UIPluginService, fc_client_1.UploadService, fc_client_1.UsersService, fc_client_1.ViewsService, fc_client_1.TokenBasedService, rules_service_1.RulesService, ruleToArgument_service_1.RuleToArgumentService, scenario_service_1.ScenarioService, scenarioAction_service_1.ScenarioActionService, scenarioToAction_service_1.ScenarioToActionService, scenarioToTrigger_service_1.ScenarioToTriggerService, scenarioTrigger_service_1.ScenarioTriggerService,];
+const flexicore_client_1 = require("@flexicore/flexicore-client");
+exports.AuthenticationService = flexicore_client_1.AuthenticationService;
+exports.BaseclassesService = flexicore_client_1.BaseclassesService;
+exports.CategoriesService = flexicore_client_1.CategoriesService;
+exports.ClazzService = flexicore_client_1.ClazzService;
+exports.CoreService = flexicore_client_1.CoreService;
+exports.DebugService = flexicore_client_1.DebugService;
+exports.DevicesService = flexicore_client_1.DevicesService;
+exports.DocumnetationService = flexicore_client_1.DocumnetationService;
+exports.DownloadService = flexicore_client_1.DownloadService;
+exports.DynamicPropertiesService = flexicore_client_1.DynamicPropertiesService;
+exports.LicenseService = flexicore_client_1.LicenseService;
+exports.MediaService = flexicore_client_1.MediaService;
+exports.PluginsService = flexicore_client_1.PluginsService;
+exports.RolesService = flexicore_client_1.RolesService;
+exports.SettingsService = flexicore_client_1.SettingsService;
+exports.TenantsService = flexicore_client_1.TenantsService;
+exports.TestService = flexicore_client_1.TestService;
+exports.UIPluginService = flexicore_client_1.UIPluginService;
+exports.UploadService = flexicore_client_1.UploadService;
+exports.UsersService = flexicore_client_1.UsersService;
+exports.ViewsService = flexicore_client_1.ViewsService;
+exports.TokenBasedService = flexicore_client_1.TokenBasedService;
+exports.APIS = [flexicore_client_1.AuthenticationService, flexicore_client_1.BaseclassesService, flexicore_client_1.CategoriesService, flexicore_client_1.ClazzService, flexicore_client_1.CoreService,
+    flexicore_client_1.DebugService, flexicore_client_1.DevicesService, flexicore_client_1.DocumnetationService, flexicore_client_1.DownloadService, flexicore_client_1.DynamicPropertiesService,
+    flexicore_client_1.LicenseService, flexicore_client_1.MediaService, flexicore_client_1.PluginsService, flexicore_client_1.RolesService, flexicore_client_1.SettingsService, flexicore_client_1.TenantsService, flexicore_client_1.TestService,
+    flexicore_client_1.UIPluginService, flexicore_client_1.UploadService, flexicore_client_1.UsersService, flexicore_client_1.ViewsService, flexicore_client_1.TokenBasedService, rules_service_1.RulesService, ruleToArgument_service_1.RuleToArgumentService, scenario_service_1.ScenarioService, scenarioAction_service_1.ScenarioActionService, scenarioToAction_service_1.ScenarioToActionService, scenarioToTrigger_service_1.ScenarioToTriggerService, scenarioTrigger_service_1.ScenarioTriggerService,];
 //# sourceMappingURL=api.js.map

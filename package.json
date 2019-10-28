@@ -1,6 +1,6 @@
 {
   "name": "@flexicore/flexicore-rule-client",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "description": "This is a typescript client for flexicore-rules",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -30,6 +30,6 @@
     "zone.js": "^0.8.18"
   },
   "dependencies": {
-    "@hanoch/fc_client": "^1.7.36"
+    "@flexicore/flexicore-client": "^2.0.8"
   }
 }

@@ -13,7 +13,7 @@ const core_1 = require("@angular/core");
 const http_1 = require("@angular/common/http");
 const variables_1 = require("../variables");
 const configuration_1 = require("../configuration");
-const fc_client_1 = require("@hanoch/fc_client");
+const flexicore_client_1 = require("@flexicore/flexicore-client");
 let ScenarioTriggerService = class ScenarioTriggerService {
     constructor(httpClient, basePath, configuration) {
         this.httpClient = httpClient;
@@ -61,7 +61,7 @@ let ScenarioTriggerService = class ScenarioTriggerService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => fc_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
     }
     fireTrigger(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -87,7 +87,7 @@ let ScenarioTriggerService = class ScenarioTriggerService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => fc_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
     }
     getAllScenarioTrigger(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -113,7 +113,7 @@ let ScenarioTriggerService = class ScenarioTriggerService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => fc_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
     }
     updateScenarioTrigger(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -139,7 +139,7 @@ let ScenarioTriggerService = class ScenarioTriggerService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => fc_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
     }
 };
 ScenarioTriggerService = __decorate([

@@ -23,7 +23,7 @@ import { ScenarioToTriggerUpdate } from '../model/scenarioToTriggerUpdate';
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
 import { ScenarioToTriggerFilter } from '../model/scenarioToTriggerFilter';
-import { PaginationResponse, FlexiCoreDecycle } from '@hanoch/fc_client';
+import { PaginationResponse, FlexiCoreDecycle } from '@flexicore/flexicore-client';
 
 
 @Injectable()

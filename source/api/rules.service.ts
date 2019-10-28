@@ -21,7 +21,7 @@ import { EvaluateRuleResponse } from '../model/evaluateRuleResponse';
 import { FlexiCoreRule } from '../model/flexiCoreRule';
 import { FlexiCoreRuleLink } from '../model/flexiCoreRuleLink';
 import { FlexiCoreRuleOp } from '../model/flexiCoreRuleOp';
-import { PaginationResponse, FlexiCoreDecycle } from '@hanoch/fc_client';
+import { PaginationResponse, FlexiCoreDecycle } from '@flexicore/flexicore-client';
 import { RuleCreateOp } from '../model/ruleCreateOp';
 import { RuleLinkCreate } from '../model/ruleLinkCreate';
 import { RuleLinkFilter } from '../model/ruleLinkFilter';

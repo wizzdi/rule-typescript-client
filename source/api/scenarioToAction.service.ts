@@ -16,7 +16,7 @@ import { HttpClient, HttpHeaders, HttpParams,
 
 import { Observable }                                        from 'rxjs/Observable';
 
-import { PaginationResponse, FlexiCoreDecycle } from '@hanoch/fc_client';
+import { PaginationResponse, FlexiCoreDecycle } from '@flexicore/flexicore-client';
 import { ScenarioToAction } from '../model/scenarioToAction';
 import { ScenarioToActionCreate } from '../model/scenarioToActionCreate';
 import { ScenarioToActionUpdate } from '../model/scenarioToActionUpdate';

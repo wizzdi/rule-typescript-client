@@ -13,7 +13,7 @@ import { ScenarioTriggerService } from './scenarioTrigger.service';
 import {AuthenticationService, AuthenticationRequestHolder, BaseclassesService, CategoriesService, ClazzService, CoreService, DebugService,
     DevicesService, DocumnetationService, DownloadService, DynamicPropertiesService, LicenseService, MediaService,
     PluginsService, RolesService, SettingsService, TenantsService, TestService, UIPluginService, UploadService,
-    UsersService, ViewsService, TokenBasedService} from "@hanoch/fc_client";
+    UsersService, ViewsService, TokenBasedService} from "@flexicore/flexicore-client";
 
 
 export {AuthenticationService, AuthenticationRequestHolder, BaseclassesService, CategoriesService, ClazzService, CoreService,

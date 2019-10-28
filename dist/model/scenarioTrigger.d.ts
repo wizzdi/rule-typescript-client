@@ -1,4 +1,4 @@
-import { Baseclass } from '@hanoch/fc_client';
+import { Baseclass } from '@flexicore/flexicore-client';
 export interface ScenarioTrigger extends Baseclass {
     eventCanonicalClassName?: string;
 }

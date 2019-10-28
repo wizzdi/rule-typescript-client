@@ -9,9 +9,13 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { FilteringInformationHolder } from '@hanoch/fc_client';
+import { FilteringInformationHolder } from '@flexicore/flexicore-client';
 
 
 
 export interface ScenarioToActionFilter extends FilteringInformationHolder { 
+
+    enabled?:boolean;
+    actionsIds?:Array<string>;
+    scenarioIds?:Array<string>;
 }

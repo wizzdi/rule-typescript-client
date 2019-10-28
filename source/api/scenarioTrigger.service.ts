@@ -23,7 +23,7 @@ import { ScenarioTriggerUpdate } from '../model/scenarioTriggerUpdate';
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
 import { ScenarioTriggerFilter } from '../model/scenarioTriggerFilter';
-import { PaginationResponse, FlexiCoreDecycle } from '@hanoch/fc_client';
+import { PaginationResponse, FlexiCoreDecycle } from '@flexicore/flexicore-client';
 import { FireScenarioTrigger } from '../model/fireScenarioTrigger';
 
 
