@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders, HttpResponse, HttpEvent } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import { PaginationResponse } from '@hanoch/fc_client';
+import { PaginationResponse } from '@flexicore/flexicore-client';
 import { ScenarioAction } from '../model/scenarioAction';
 import { ScenarioActionUpdate } from '../model/scenarioActionUpdate';
 import { Configuration } from '../configuration';

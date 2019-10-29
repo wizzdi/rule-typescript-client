@@ -18,18 +18,18 @@ import {
 
 import {Observable} from 'rxjs/Observable';
 
-import {EvaluateRuleRequest} from '../model/evaluateRuleRequest';
-import {EvaluateRuleResponse} from '../model/evaluateRuleResponse';
-import {FlexiCoreRule} from '../model/flexiCoreRule';
-import {FlexiCoreRuleLink} from '../model/flexiCoreRuleLink';
-import {FlexiCoreRuleOp} from '../model/flexiCoreRuleOp';
-import {PaginationResponse, FlexiCoreDecycle} from '@hanoch/fc_client';
-import {RuleCreateOp} from '../model/ruleCreateOp';
-import {RuleLinkCreate} from '../model/ruleLinkCreate';
-import {RuleLinkFilter} from '../model/ruleLinkFilter';
-import {RuleLinkUpdate} from '../model/ruleLinkUpdate';
-import {RuleUpdate} from '../model/ruleUpdate';
-import {RuleUpdateOp} from '../model/ruleUpdateOp';
+import { EvaluateRuleRequest } from '../model/evaluateRuleRequest';
+import { EvaluateRuleResponse } from '../model/evaluateRuleResponse';
+import { FlexiCoreRule } from '../model/flexiCoreRule';
+import { FlexiCoreRuleLink } from '../model/flexiCoreRuleLink';
+import { FlexiCoreRuleOp } from '../model/flexiCoreRuleOp';
+import { PaginationResponse, FlexiCoreDecycle } from '@flexicore/flexicore-client';
+import { RuleCreateOp } from '../model/ruleCreateOp';
+import { RuleLinkCreate } from '../model/ruleLinkCreate';
+import { RuleLinkFilter } from '../model/ruleLinkFilter';
+import { RuleLinkUpdate } from '../model/ruleLinkUpdate';
+import { RuleUpdate } from '../model/ruleUpdate';
+import { RuleUpdateOp } from '../model/ruleUpdateOp';
 
 import {BASE_PATH, COLLECTION_FORMATS} from '../variables';
 import {Configuration} from '../configuration';

@@ -11,7 +11,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@angular/core");
 const http_1 = require("@angular/common/http");
-const fc_client_1 = require("@hanoch/fc_client");
+const flexicore_client_1 = require("@flexicore/flexicore-client");
 const variables_1 = require("../variables");
 const configuration_1 = require("../configuration");
 let ScenarioActionService = class ScenarioActionService {
@@ -61,7 +61,7 @@ let ScenarioActionService = class ScenarioActionService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => fc_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
     }
     getAllScenarioAction(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -87,7 +87,7 @@ let ScenarioActionService = class ScenarioActionService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => fc_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
     }
     updateScenarioAction(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -113,7 +113,7 @@ let ScenarioActionService = class ScenarioActionService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => fc_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
     }
 };
 ScenarioActionService = __decorate([

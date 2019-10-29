@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders, HttpResponse, HttpEvent } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import { PaginationResponse } from '@hanoch/fc_client';
+import { PaginationResponse } from '@flexicore/flexicore-client';
 import { RuleToArgument } from '../model/ruleToArgument';
 import { RuleToArgumentCreate } from '../model/ruleToArgumentCreate';
 import { RuleToArgumentHolderFilter } from '../model/ruleToArgumentHolderFilter';

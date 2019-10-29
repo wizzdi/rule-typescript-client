@@ -13,7 +13,7 @@ const core_1 = require("@angular/core");
 const http_1 = require("@angular/common/http");
 const variables_1 = require("../variables");
 const configuration_1 = require("../configuration");
-const fc_client_1 = require("@hanoch/fc_client");
+const flexicore_client_1 = require("@flexicore/flexicore-client");
 let ScenarioToTriggerService = class ScenarioToTriggerService {
     constructor(httpClient, basePath, configuration) {
         this.httpClient = httpClient;
@@ -61,7 +61,7 @@ let ScenarioToTriggerService = class ScenarioToTriggerService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => fc_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
     }
     getAllScenarioToTrigger(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -87,7 +87,7 @@ let ScenarioToTriggerService = class ScenarioToTriggerService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => fc_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
     }
     updateScenarioToTrigger(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -113,7 +113,7 @@ let ScenarioToTriggerService = class ScenarioToTriggerService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => fc_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
     }
 };
 ScenarioToTriggerService = __decorate([

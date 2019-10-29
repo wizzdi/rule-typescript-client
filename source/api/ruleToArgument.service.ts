@@ -16,7 +16,7 @@ import { HttpClient, HttpHeaders, HttpParams,
 
 import { Observable }                                        from 'rxjs/Observable';
 
-import { PaginationResponse, FlexiCoreDecycle } from '@hanoch/fc_client';
+import { PaginationResponse, FlexiCoreDecycle } from '@flexicore/flexicore-client';
 import { RuleToArgument } from '../model/ruleToArgument';
 import { RuleToArgumentCreate } from '../model/ruleToArgumentCreate';
 import { RuleToArgumentHolderFilter } from '../model/ruleToArgumentHolderFilter';

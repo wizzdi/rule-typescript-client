@@ -1,4 +1,4 @@
-import { CreateDynamicExecution } from "@hanoch/fc_client";
+import { CreateDynamicExecution } from "@flexicore/flexicore-client";
 
 /**
  * REST API for Flexicore filtered by your access rights
