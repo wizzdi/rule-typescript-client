@@ -9,7 +9,7 @@ import {
     RuleArgumentUpdate
 } from "..";
 import {Observable} from "rxjs/Observable";
-import {FlexiCoreDecycle, PaginationResponse} from "@hanoch/fc_client";
+import {FlexiCoreDecycle, PaginationResponse} from "@flexicore/flexicore-client";
 
 @Injectable()
 export class RuleArgumentService {

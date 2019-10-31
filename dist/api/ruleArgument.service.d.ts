@@ -2,7 +2,7 @@ import { HttpClient, HttpEvent, HttpHeaders, HttpResponse } from "@angular/commo
 import { Configuration } from "../configuration";
 import { FlexiCoreRuleArgument, RuleArgumentCreate, RuleArgumentFilter, RuleArgumentUpdate } from "..";
 import { Observable } from "rxjs/Observable";
-import { PaginationResponse } from "@hanoch/fc_client";
+import { PaginationResponse } from "@flexicore/flexicore-client";
 export declare class RuleArgumentService {
     protected httpClient: HttpClient;
     protected basePath: string;

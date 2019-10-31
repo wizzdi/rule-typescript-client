@@ -113,7 +113,7 @@ let RulesService = class RulesService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => fc_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
     }
     evaluateRule(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
