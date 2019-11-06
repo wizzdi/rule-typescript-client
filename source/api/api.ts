@@ -1,5 +1,6 @@
 
 import { RulesService } from './rules.service';
+import { RuleArgumentService} from './ruleArgument.service';
 import { RuleToArgumentService } from './ruleToArgument.service';
 
 import { ScenarioService } from './scenario.service';
@@ -19,8 +20,8 @@ import {AuthenticationService, AuthenticationRequestHolder, BaseclassesService, 
 export {AuthenticationService, AuthenticationRequestHolder, BaseclassesService, CategoriesService, ClazzService, CoreService,
     DebugService, DevicesService, DocumnetationService,  DownloadService, DynamicPropertiesService,
     LicenseService, MediaService, PluginsService, RolesService, SettingsService, TenantsService, TestService,
-    UIPluginService, UploadService, UsersService, ViewsService,TokenBasedService,RulesService,RuleToArgumentService,ScenarioService,ScenarioActionService,ScenarioToActionService,ScenarioToTriggerService,ScenarioTriggerService,};
+    UIPluginService, UploadService, UsersService, ViewsService,TokenBasedService,RulesService,RuleArgumentService,RuleToArgumentService,ScenarioService,ScenarioActionService,ScenarioToActionService,ScenarioToTriggerService,ScenarioTriggerService,};
 export const APIS = [AuthenticationService, BaseclassesService, CategoriesService, ClazzService, CoreService,
     DebugService, DevicesService, DocumnetationService, DownloadService, DynamicPropertiesService,
     LicenseService, MediaService, PluginsService, RolesService, SettingsService, TenantsService, TestService,
-    UIPluginService, UploadService, UsersService, ViewsService,TokenBasedService,RulesService,RuleToArgumentService,ScenarioService,ScenarioActionService,ScenarioToActionService,ScenarioToTriggerService,ScenarioTriggerService,];
+    UIPluginService, UploadService, UsersService, ViewsService,TokenBasedService,RulesService,RuleArgumentService,RuleToArgumentService,ScenarioService,ScenarioActionService,ScenarioToActionService,ScenarioToTriggerService,ScenarioTriggerService,];

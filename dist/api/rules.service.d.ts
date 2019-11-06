@@ -14,6 +14,7 @@ import { RuleUpdate } from '../model/ruleUpdate';
 import { RuleUpdateOp } from '../model/ruleUpdateOp';
 import { Configuration } from '../configuration';
 import { RulesFilter } from '../model/rulesFilter';
+import { RuleCreate } from "..";
 export declare class RulesService {
     protected httpClient: HttpClient;
     protected basePath: string;
@@ -27,6 +28,9 @@ export declare class RulesService {
     createRuleOp(body?: RuleCreateOp, authenticationKey?: string, observe?: 'body', reportProgress?: boolean): Observable<FlexiCoreRuleOp>;
     createRuleOp(body?: RuleCreateOp, authenticationKey?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FlexiCoreRuleOp>>;
     createRuleOp(body?: RuleCreateOp, authenticationKey?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FlexiCoreRuleOp>>;
+    createRule(body?: RuleCreate, authenticationKey?: string, observe?: 'body', reportProgress?: boolean): Observable<FlexiCoreRule>;
+    createRule(body?: RuleCreate, authenticationKey?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FlexiCoreRule>>;
+    createRule(body?: RuleCreate, authenticationKey?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FlexiCoreRule>>;
     evaluateRule(body?: EvaluateRuleRequest, authenticationKey?: string, observe?: 'body', reportProgress?: boolean): Observable<EvaluateRuleResponse>;
     evaluateRule(body?: EvaluateRuleRequest, authenticationKey?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<EvaluateRuleResponse>>;
     evaluateRule(body?: EvaluateRuleRequest, authenticationKey?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<EvaluateRuleResponse>>;

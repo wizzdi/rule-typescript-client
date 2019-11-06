@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const rules_service_1 = require("./rules.service");
 exports.RulesService = rules_service_1.RulesService;
+const ruleArgument_service_1 = require("./ruleArgument.service");
+exports.RuleArgumentService = ruleArgument_service_1.RuleArgumentService;
 const ruleToArgument_service_1 = require("./ruleToArgument.service");
 exports.RuleToArgumentService = ruleToArgument_service_1.RuleToArgumentService;
 const scenario_service_1 = require("./scenario.service");
@@ -40,5 +42,5 @@ exports.TokenBasedService = flexicore_client_1.TokenBasedService;
 exports.APIS = [flexicore_client_1.AuthenticationService, flexicore_client_1.BaseclassesService, flexicore_client_1.CategoriesService, flexicore_client_1.ClazzService, flexicore_client_1.CoreService,
     flexicore_client_1.DebugService, flexicore_client_1.DevicesService, flexicore_client_1.DocumnetationService, flexicore_client_1.DownloadService, flexicore_client_1.DynamicPropertiesService,
     flexicore_client_1.LicenseService, flexicore_client_1.MediaService, flexicore_client_1.PluginsService, flexicore_client_1.RolesService, flexicore_client_1.SettingsService, flexicore_client_1.TenantsService, flexicore_client_1.TestService,
-    flexicore_client_1.UIPluginService, flexicore_client_1.UploadService, flexicore_client_1.UsersService, flexicore_client_1.ViewsService, flexicore_client_1.TokenBasedService, rules_service_1.RulesService, ruleToArgument_service_1.RuleToArgumentService, scenario_service_1.ScenarioService, scenarioAction_service_1.ScenarioActionService, scenarioToAction_service_1.ScenarioToActionService, scenarioToTrigger_service_1.ScenarioToTriggerService, scenarioTrigger_service_1.ScenarioTriggerService,];
+    flexicore_client_1.UIPluginService, flexicore_client_1.UploadService, flexicore_client_1.UsersService, flexicore_client_1.ViewsService, flexicore_client_1.TokenBasedService, rules_service_1.RulesService, ruleArgument_service_1.RuleArgumentService, ruleToArgument_service_1.RuleToArgumentService, scenario_service_1.ScenarioService, scenarioAction_service_1.ScenarioActionService, scenarioToAction_service_1.ScenarioToActionService, scenarioToTrigger_service_1.ScenarioToTriggerService, scenarioTrigger_service_1.ScenarioTriggerService,];
 //# sourceMappingURL=api.js.map
