@@ -3,4 +3,5 @@ export interface ScenarioCreate {
     description?: string;
     ruleId?: string;
     scenarioHint?: string;
+    actionManagerScriptId?: string;
 }
