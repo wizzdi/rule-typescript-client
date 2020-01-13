@@ -9,12 +9,10 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+import { TriggerManagerCreate } from './triggerManagerCreate';
 
-export interface ScenarioToTriggerCreate { 
-    name?: string;
-    description?: string;
-    scenarioId?: string;
-    triggerId?: string;
-    enabled?:boolean;
-    triggerManagerId?:string;
+
+
+export interface TriggerManagerUpdate extends TriggerManagerCreate { 
+    id?: string;
 }

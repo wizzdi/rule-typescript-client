@@ -8,6 +8,7 @@ import { ScenarioActionService } from './scenarioAction.service';
 import { ScenarioToActionService } from './scenarioToAction.service';
 import { ScenarioToTriggerService } from './scenarioToTrigger.service';
 import { ScenarioTriggerService } from './scenarioTrigger.service';
+import { TriggerManagerService } from './triggerManager.service';
 
 
 
@@ -21,7 +22,7 @@ export {AuthenticationService, AuthenticationRequestHolder, BaseclassesService, 
     DebugService, DevicesService, DocumnetationService,  DownloadService, DynamicPropertiesService,
     LicenseService, MediaService, PluginsService, RolesService, SettingsService, TenantsService, TestService,
     UIPluginService, UploadService, UsersService, ViewsService,TokenBasedService,RulesService,RuleArgumentService,RuleToArgumentService,ScenarioService,ScenarioActionService,ScenarioToActionService,ScenarioToTriggerService,ScenarioTriggerService,};
-export const APIS = [AuthenticationService, BaseclassesService, CategoriesService, ClazzService, CoreService,
+export const APIS = [AuthenticationService, BaseclassesService, CategoriesService, ClazzService, CoreService,TriggerManagerService,
     DebugService, DevicesService, DocumnetationService, DownloadService, DynamicPropertiesService,
-    LicenseService, MediaService, PluginsService, RolesService, SettingsService, TenantsService, TestService,
+    LicenseService, MediaService, PluginsService, RolesService, SettingsService, TenantsService, TestService,TriggerManagerService,
     UIPluginService, UploadService, UsersService, ViewsService,TokenBasedService,RulesService,RuleArgumentService,RuleToArgumentService,ScenarioService,ScenarioActionService,ScenarioToActionService,ScenarioToTriggerService,ScenarioTriggerService,];
