@@ -6,6 +6,7 @@ import { ScenarioCreate } from '../model/scenarioCreate';
 import { ScenarioUpdate } from '../model/scenarioUpdate';
 import { Configuration } from '../configuration';
 import { ScenarioFilter } from '../model/scenarioFilter';
+import { ClearLogRequest } from '../model/models';
 export declare class ScenarioService {
     protected httpClient: HttpClient;
     protected basePath: string;
@@ -13,6 +14,9 @@ export declare class ScenarioService {
     configuration: Configuration;
     constructor(httpClient: HttpClient, basePath: string, configuration: Configuration);
     private canConsumeForm;
+    clearLog(body?: ClearLogRequest, authenticationKey?: string, observe?: 'body', reportProgress?: boolean): Observable<void>;
+    clearLog(body?: ClearLogRequest, authenticationKey?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<void>>;
+    clearLog(body?: ClearLogRequest, authenticationKey?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<void>>;
     createScenario(body?: ScenarioCreate, authenticationKey?: string, observe?: 'body', reportProgress?: boolean): Observable<Scenario>;
     createScenario(body?: ScenarioCreate, authenticationKey?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<Scenario>>;
     createScenario(body?: ScenarioCreate, authenticationKey?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<Scenario>>;

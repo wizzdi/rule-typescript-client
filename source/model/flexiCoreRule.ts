@@ -14,5 +14,4 @@
 
 export interface FlexiCoreRule extends Baseclass { 
     evaluationScript?: FileResource;
-    logFileResource?:FileResource;
 }

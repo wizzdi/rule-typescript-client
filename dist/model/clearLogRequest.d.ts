@@ -1,3 +1,3 @@
 export interface ClearLogRequest {
-    ruleId?: string;
+    scenarioId?: string;
 }

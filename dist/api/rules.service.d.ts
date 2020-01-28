@@ -15,7 +15,6 @@ import { RuleUpdateOp } from '../model/ruleUpdateOp';
 import { Configuration } from '../configuration';
 import { RulesFilter } from '../model/rulesFilter';
 import { RuleCreate } from "..";
-import { ClearLogRequest } from '../model/clearLogRequest';
 export declare class RulesService {
     protected httpClient: HttpClient;
     protected basePath: string;
@@ -26,9 +25,6 @@ export declare class RulesService {
     createRuleLink(body?: RuleLinkCreate, authenticationKey?: string, observe?: 'body', reportProgress?: boolean): Observable<FlexiCoreRuleLink>;
     createRuleLink(body?: RuleLinkCreate, authenticationKey?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FlexiCoreRuleLink>>;
     createRuleLink(body?: RuleLinkCreate, authenticationKey?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FlexiCoreRuleLink>>;
-    clearLog(body?: ClearLogRequest, authenticationKey?: string, observe?: 'body', reportProgress?: boolean): Observable<void>;
-    clearLog(body?: ClearLogRequest, authenticationKey?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<void>>;
-    clearLog(body?: ClearLogRequest, authenticationKey?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<void>>;
     createRuleOp(body?: RuleCreateOp, authenticationKey?: string, observe?: 'body', reportProgress?: boolean): Observable<FlexiCoreRuleOp>;
     createRuleOp(body?: RuleCreateOp, authenticationKey?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FlexiCoreRuleOp>>;
     createRuleOp(body?: RuleCreateOp, authenticationKey?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FlexiCoreRuleOp>>;

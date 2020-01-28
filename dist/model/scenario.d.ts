@@ -4,4 +4,5 @@ export interface Scenario extends Baseclass {
     flexiCoreRule?: FlexiCoreRule;
     scenarioHint?: string;
     actionManagerScript?: FileResource;
+    logFileResource?: FileResource;
 }
