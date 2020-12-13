@@ -7,7 +7,7 @@ import { Observable }                                        from 'rxjs/Observab
 import { ScenarioTriggerType } from '../model/scenarioTriggerType';
 
 
-import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
+import { BASE_PATH}                     from '../variables';
 import { Configuration }                                     from '../configuration';
 import { ScenarioTriggerTypeFilter } from '../model/scenarioTriggerTypeFilter';
 import { PaginationResponse, FlexiCoreDecycle } from '@flexicore/flexicore-client';
@@ -18,7 +18,8 @@ export class ScenarioTriggerTypeService
     protected basePath = '/FlexiCore';
     public defaultHeaders = new HttpHeaders();
     public configuration = new Configuration();
-    constructor(protected httpClient: HttpClient, @Optional()@Inject(BASE_PATH) basePath: string, @Optional() configuration: Configuration) {
+    constructor(protected httpClient: HttpClient,
+         @Optional()@Inject(BASE_PATH) basePath: string, @Optional() configuration: Configuration) {
         if (basePath) {
             this.basePath = basePath;
         }
@@ -27,6 +28,10 @@ export class ScenarioTriggerTypeService
             this.basePath = basePath || configuration.basePath || this.basePath;
         }
     }
+    public getAllScenarioTriggerTypes(body?: ScenarioTriggerTypeFilter, authenticationKey?: string, observe?: 'body', reportProgress?: boolean): Observable<PaginationResponse<ScenarioTriggerType>>;
+    public getAllScenarioTriggerTypes(body?: ScenarioTriggerTypeFilter, authenticationKey?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<PaginationResponse<ScenarioTriggerType>>>;
+    public getAllScenarioTriggerTypes(body?: ScenarioTriggerTypeFilter, authenticationKey?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<PaginationResponse<ScenarioTriggerType>>>;
+  
 public getAllScenarioTriggerTypes(body?: ScenarioTriggerTypeFilter,
      authenticationKey?: string, observe: any = 'body', 
      reportProgress: boolean = false ): Observable<any> {

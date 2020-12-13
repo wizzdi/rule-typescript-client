@@ -1,10 +1,5 @@
-import { Baseclass,BaseclassIdFiltering,FilteringInformationHolder, SortParameter} from '@flexicore/flexicore-client';
-import { ExcludeIds } from './excludeIds';
-import { Includeds } from './includeIds';
-import { Sort } from './sort';
-
-export interface ScenarioTriggerTypeFilter extends FilteringInformationHolder
-{
+import { BaseclassIdFiltering, FilteringInformationHolder, SortParameter } from '@flexicore/flexicore-client';
+export interface ScenarioTriggerTypeFilter extends FilteringInformationHolder {
     id?: string;
     sort?: SortParameter[];
     nameLike?: string;
@@ -22,7 +17,4 @@ export interface ScenarioTriggerTypeFilter extends FilteringInformationHolder
     fetchSoftDelete?: boolean;
     permissionContextLike?: string;
     eventCanonicalNames?: string[];
-    
-
 }
-
