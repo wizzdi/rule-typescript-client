@@ -50,3 +50,6 @@ export * from './includeIds';
 export * from './excludeIds';
 export * from './scenarioTriggerType';
 export * from './scenarioTriggerTypeFilter';
+export * from './jsFunction';
+export * from './jsFunctionFilter';
+export * from './jsFunctionCreate';
