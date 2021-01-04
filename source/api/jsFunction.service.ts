@@ -3,7 +3,7 @@ import { Inject, Injectable, Optional } from "@angular/core";
 import { BASE_PATH, FlexiCoreDecycle, PaginationResponse } from "@flexicore/flexicore-client";
 import { Observable } from "rxjs/Observable";
 import { Configuration } from "../configuration";
-import { JSFunctionCreate, JSFunctionFilter, JSFunctions } from "../model/models";
+import { JSFunctionCreate, JSFunctionFilter, JSFunctions, JSFunctionUpdate } from "../model/models";
 
 @Injectable()
 export class JSFunctionService 
@@ -103,6 +103,43 @@ export class JSFunctionService
         }
 
         return this.httpClient.post<JSFunctionCreate>(`${this.basePath}/plugins/JSFunction/createJSFunction`,
+            body,
+            {
+                withCredentials: this.configuration.withCredentials,
+                headers: headers,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        ).map(o=>FlexiCoreDecycle.retrocycle(o));
+    }
+    public updateJSFunction(body?: JSFunctionUpdate, authenticationKey?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+
+
+
+        let headers = this.defaultHeaders;
+        if (authenticationKey !== undefined && authenticationKey !== null) {
+            headers = headers.set('authenticationKey', String(authenticationKey));
+        }
+
+        // to determine the Accept header
+        let httpHeaderAccepts: string[] = [
+            'application/json'
+        ];
+        const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        if (httpHeaderAcceptSelected != undefined) {
+            headers = headers.set('Accept', httpHeaderAcceptSelected);
+        }
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+            'application/json'
+        ];
+        const httpContentTypeSelected: string | undefined = this.configuration.selectHeaderContentType(consumes);
+        if (httpContentTypeSelected != undefined) {
+            headers = headers.set('Content-Type', httpContentTypeSelected);
+        }
+
+        return this.httpClient.put<JSFunctionUpdate>(`${this.basePath}/plugins/JSFunction/updateJSFunction`,
             body,
             {
                 withCredentials: this.configuration.withCredentials,

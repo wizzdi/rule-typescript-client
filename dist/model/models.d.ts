@@ -53,3 +53,4 @@ export * from './scenarioTriggerTypeFilter';
 export * from './jsFunction';
 export * from './jsFunctionFilter';
 export * from './jsFunctionCreate';
+export * from './jsFunctionUpdate';
