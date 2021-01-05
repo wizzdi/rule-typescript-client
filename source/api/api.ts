@@ -9,7 +9,8 @@ import { ScenarioToActionService } from './scenarioToAction.service';
 import { ScenarioToTriggerService } from './scenarioToTrigger.service';
 import { ScenarioTriggerService } from './scenarioTrigger.service';
 import { TriggerManagerService } from './triggerManager.service';
-
+import {ScenarioTriggerTypeService} from './scenarioTriggerType.service';
+import { JSFunctionService } from './jsFunction.service';
 
 
 import {AuthenticationService, AuthenticationRequestHolder, BaseclassesService, CategoriesService, ClazzService, CoreService, DebugService,
@@ -18,11 +19,19 @@ import {AuthenticationService, AuthenticationRequestHolder, BaseclassesService, 
     UsersService, ViewsService, TokenBasedService} from "@flexicore/flexicore-client";
 
 
+
 export {AuthenticationService, AuthenticationRequestHolder, BaseclassesService, CategoriesService, ClazzService, CoreService,
     DebugService, DevicesService, DocumnetationService,  DownloadService, DynamicPropertiesService,
     LicenseService, MediaService, PluginsService, RolesService, SettingsService, TenantsService, TestService,
-    UIPluginService, UploadService, UsersService, ViewsService,TokenBasedService,RulesService,RuleArgumentService,RuleToArgumentService,ScenarioService,ScenarioActionService,ScenarioToActionService,ScenarioToTriggerService,ScenarioTriggerService,};
+    UIPluginService, UploadService, UsersService, ViewsService,TokenBasedService,RulesService,RuleArgumentService,RuleToArgumentService,
+    ScenarioService,ScenarioActionService,ScenarioToActionService,ScenarioToTriggerService,
+    ScenarioTriggerTypeService, ScenarioTriggerService,JSFunctionService};
 export const APIS = [AuthenticationService, BaseclassesService, CategoriesService, ClazzService, CoreService,TriggerManagerService,
     DebugService, DevicesService, DocumnetationService, DownloadService, DynamicPropertiesService,
     LicenseService, MediaService, PluginsService, RolesService, SettingsService, TenantsService, TestService,TriggerManagerService,
-    UIPluginService, UploadService, UsersService, ViewsService,TokenBasedService,RulesService,RuleArgumentService,RuleToArgumentService,ScenarioService,ScenarioActionService,ScenarioToActionService,ScenarioToTriggerService,ScenarioTriggerService,];
+    UIPluginService, UploadService, 
+    UsersService, ViewsService,TokenBasedService,
+    RulesService,RuleArgumentService,
+    RuleToArgumentService,ScenarioService,ScenarioActionService,
+    ScenarioToActionService,ScenarioToTriggerService,
+    ScenarioTriggerTypeService, ScenarioTriggerService,JSFunctionService];

@@ -17,6 +17,10 @@ exports.ScenarioToTriggerService = scenarioToTrigger_service_1.ScenarioToTrigger
 const scenarioTrigger_service_1 = require("./scenarioTrigger.service");
 exports.ScenarioTriggerService = scenarioTrigger_service_1.ScenarioTriggerService;
 const triggerManager_service_1 = require("./triggerManager.service");
+const scenarioTriggerType_service_1 = require("./scenarioTriggerType.service");
+exports.ScenarioTriggerTypeService = scenarioTriggerType_service_1.ScenarioTriggerTypeService;
+const jsFunction_service_1 = require("./jsFunction.service");
+exports.JSFunctionService = jsFunction_service_1.JSFunctionService;
 const flexicore_client_1 = require("@flexicore/flexicore-client");
 exports.AuthenticationService = flexicore_client_1.AuthenticationService;
 exports.BaseclassesService = flexicore_client_1.BaseclassesService;
@@ -43,5 +47,10 @@ exports.TokenBasedService = flexicore_client_1.TokenBasedService;
 exports.APIS = [flexicore_client_1.AuthenticationService, flexicore_client_1.BaseclassesService, flexicore_client_1.CategoriesService, flexicore_client_1.ClazzService, flexicore_client_1.CoreService, triggerManager_service_1.TriggerManagerService,
     flexicore_client_1.DebugService, flexicore_client_1.DevicesService, flexicore_client_1.DocumnetationService, flexicore_client_1.DownloadService, flexicore_client_1.DynamicPropertiesService,
     flexicore_client_1.LicenseService, flexicore_client_1.MediaService, flexicore_client_1.PluginsService, flexicore_client_1.RolesService, flexicore_client_1.SettingsService, flexicore_client_1.TenantsService, flexicore_client_1.TestService, triggerManager_service_1.TriggerManagerService,
-    flexicore_client_1.UIPluginService, flexicore_client_1.UploadService, flexicore_client_1.UsersService, flexicore_client_1.ViewsService, flexicore_client_1.TokenBasedService, rules_service_1.RulesService, ruleArgument_service_1.RuleArgumentService, ruleToArgument_service_1.RuleToArgumentService, scenario_service_1.ScenarioService, scenarioAction_service_1.ScenarioActionService, scenarioToAction_service_1.ScenarioToActionService, scenarioToTrigger_service_1.ScenarioToTriggerService, scenarioTrigger_service_1.ScenarioTriggerService,];
+    flexicore_client_1.UIPluginService, flexicore_client_1.UploadService,
+    flexicore_client_1.UsersService, flexicore_client_1.ViewsService, flexicore_client_1.TokenBasedService,
+    rules_service_1.RulesService, ruleArgument_service_1.RuleArgumentService,
+    ruleToArgument_service_1.RuleToArgumentService, scenario_service_1.ScenarioService, scenarioAction_service_1.ScenarioActionService,
+    scenarioToAction_service_1.ScenarioToActionService, scenarioToTrigger_service_1.ScenarioToTriggerService,
+    scenarioTriggerType_service_1.ScenarioTriggerTypeService, scenarioTrigger_service_1.ScenarioTriggerService, jsFunction_service_1.JSFunctionService];
 //# sourceMappingURL=api.js.map
