@@ -1,7 +1,8 @@
 import { HttpClient, HttpEvent, HttpHeaders, HttpResponse } from "@angular/common/http";
 import { Inject, Injectable, Optional } from "@angular/core";
 import { BASE_PATH, FlexiCoreDecycle, PaginationResponse } from "@flexicore/flexicore-client";
-import { Observable } from "rxjs/Observable";
+import { Observable } from "rxjs";
+import { map } from "rxjs/operators";
 import { Configuration } from "../configuration";
 import { JSFunctionCreate, JSFunctionFilter, JSFunctions, JSFunctionUpdate } from "../model/models";
 
@@ -73,7 +74,7 @@ export class JSFunctionService
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).map(o=>FlexiCoreDecycle.retrocycle(o));
+        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
     }
     public createJSFunction(body?: JSFunctionCreate, authenticationKey?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
 
@@ -110,7 +111,7 @@ export class JSFunctionService
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).map(o=>FlexiCoreDecycle.retrocycle(o));
+        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
     }
     public updateJSFunction(body?: JSFunctionUpdate, authenticationKey?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
 
@@ -147,6 +148,6 @@ export class JSFunctionService
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).map(o=>FlexiCoreDecycle.retrocycle(o));
+        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
     }
 }

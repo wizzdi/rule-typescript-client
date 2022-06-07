@@ -9,9 +9,11 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.JSFunctionService = void 0;
 const http_1 = require("@angular/common/http");
 const core_1 = require("@angular/core");
 const flexicore_client_1 = require("@flexicore/flexicore-client");
+const operators_1 = require("rxjs/operators");
 const configuration_1 = require("../configuration");
 let JSFunctionService = class JSFunctionService {
     constructor(httpClient, basePath, configuration) {
@@ -60,7 +62,7 @@ let JSFunctionService = class JSFunctionService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).pipe(operators_1.map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o)));
     }
     createJSFunction(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -86,7 +88,7 @@ let JSFunctionService = class JSFunctionService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).pipe(operators_1.map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o)));
     }
     updateJSFunction(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -107,17 +109,19 @@ let JSFunctionService = class JSFunctionService {
         if (httpContentTypeSelected != undefined) {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
-        return this.httpClient.put(`${this.basePath}/plugins/plugins/JSFunction/updateJSFunction`, body, {
+        return this.httpClient.put(`${this.basePath}/plugins/JSFunction/updateJSFunction`, body, {
             withCredentials: this.configuration.withCredentials,
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).pipe(operators_1.map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o)));
     }
 };
 JSFunctionService = __decorate([
     core_1.Injectable(),
-    __param(1, core_1.Optional()), __param(1, core_1.Inject(flexicore_client_1.BASE_PATH)), __param(2, core_1.Optional())
+    __param(1, core_1.Optional()),
+    __param(1, core_1.Inject(flexicore_client_1.BASE_PATH)),
+    __param(2, core_1.Optional())
 ], JSFunctionService);
 exports.JSFunctionService = JSFunctionService;
 //# sourceMappingURL=jsFunction.service.js.map

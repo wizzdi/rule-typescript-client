@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders, HttpResponse, HttpEvent } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { ScenarioTriggerType } from '../model/scenarioTriggerType';
 import { Configuration } from '../configuration';
 import { ScenarioTriggerTypeFilter } from '../model/scenarioTriggerTypeFilter';

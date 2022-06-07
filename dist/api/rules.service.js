@@ -9,8 +9,10 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RulesService = void 0;
 const core_1 = require("@angular/core");
 const http_1 = require("@angular/common/http");
+const operators_1 = require("rxjs/operators");
 const flexicore_client_1 = require("@flexicore/flexicore-client");
 const variables_1 = require("../variables");
 const configuration_1 = require("../configuration");
@@ -61,7 +63,7 @@ let RulesService = class RulesService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).pipe(operators_1.map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o)));
     }
     createRuleOp(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -87,7 +89,7 @@ let RulesService = class RulesService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).pipe(operators_1.map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o)));
     }
     createRule(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -113,7 +115,7 @@ let RulesService = class RulesService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).pipe(operators_1.map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o)));
     }
     evaluateRule(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -139,7 +141,7 @@ let RulesService = class RulesService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).pipe(operators_1.map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o)));
     }
     getAllRuleLinks(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -165,7 +167,7 @@ let RulesService = class RulesService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).pipe(operators_1.map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o)));
     }
     getAllRules(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -191,7 +193,7 @@ let RulesService = class RulesService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).pipe(operators_1.map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o)));
     }
     updateRule(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -217,7 +219,7 @@ let RulesService = class RulesService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).pipe(operators_1.map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o)));
     }
     updateRuleLink(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -243,7 +245,7 @@ let RulesService = class RulesService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).pipe(operators_1.map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o)));
     }
     updateRuleOp(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -269,12 +271,14 @@ let RulesService = class RulesService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).pipe(operators_1.map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o)));
     }
 };
 RulesService = __decorate([
     core_1.Injectable(),
-    __param(1, core_1.Optional()), __param(1, core_1.Inject(variables_1.BASE_PATH)), __param(2, core_1.Optional())
+    __param(1, core_1.Optional()),
+    __param(1, core_1.Inject(variables_1.BASE_PATH)),
+    __param(2, core_1.Optional())
 ], RulesService);
 exports.RulesService = RulesService;
 //# sourceMappingURL=rules.service.js.map

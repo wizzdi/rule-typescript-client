@@ -16,7 +16,9 @@ import {
     HttpResponse, HttpEvent
 } from '@angular/common/http';
 
-import {Observable} from 'rxjs/Observable';
+import {Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
+
 
 import { EvaluateRuleRequest } from '../model/evaluateRuleRequest';
 import { EvaluateRuleResponse } from '../model/evaluateRuleResponse';
@@ -115,7 +117,7 @@ export class RulesService {
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).map(o => FlexiCoreDecycle.retrocycle(o));
+        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
     }
 
 
@@ -167,7 +169,7 @@ export class RulesService {
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).map(o => FlexiCoreDecycle.retrocycle(o));
+        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
     }
 
     /**
@@ -215,7 +217,7 @@ export class RulesService {
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).map(o => FlexiCoreDecycle.retrocycle(o));
+        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
     }
 
     /**
@@ -263,7 +265,7 @@ export class RulesService {
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).map(o => FlexiCoreDecycle.retrocycle(o));
+        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
     }
 
     /**
@@ -311,7 +313,7 @@ export class RulesService {
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).map(o => FlexiCoreDecycle.retrocycle(o));
+        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
     }
 
     /**
@@ -359,7 +361,7 @@ export class RulesService {
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).map(o => FlexiCoreDecycle.retrocycle(o));
+        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
     }
 
     /**
@@ -407,7 +409,7 @@ export class RulesService {
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).map(o => FlexiCoreDecycle.retrocycle(o));
+        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
     }
 
     /**
@@ -455,7 +457,7 @@ export class RulesService {
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).map(o => FlexiCoreDecycle.retrocycle(o));
+        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
     }
 
     /**
@@ -503,7 +505,7 @@ export class RulesService {
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).map(o => FlexiCoreDecycle.retrocycle(o));
+        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
     }
 
 }

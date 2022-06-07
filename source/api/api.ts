@@ -13,24 +13,12 @@ import {ScenarioTriggerTypeService} from './scenarioTriggerType.service';
 import { JSFunctionService } from './jsFunction.service';
 
 
-import {AuthenticationService, AuthenticationRequestHolder, BaseclassesService, CategoriesService, ClazzService, CoreService, DebugService,
-    DevicesService, DocumnetationService, DownloadService, DynamicPropertiesService, LicenseService, MediaService,
-    PluginsService, RolesService, SettingsService, TenantsService, TestService, UIPluginService, UploadService,
-    UsersService, ViewsService, TokenBasedService} from "@flexicore/flexicore-client";
 
 
-
-export {AuthenticationService, AuthenticationRequestHolder, BaseclassesService, CategoriesService, ClazzService, CoreService,
-    DebugService, DevicesService, DocumnetationService,  DownloadService, DynamicPropertiesService,
-    LicenseService, MediaService, PluginsService, RolesService, SettingsService, TenantsService, TestService,
-    UIPluginService, UploadService, UsersService, ViewsService,TokenBasedService,RulesService,RuleArgumentService,RuleToArgumentService,
+export {RulesService,RuleArgumentService,RuleToArgumentService,
     ScenarioService,ScenarioActionService,ScenarioToActionService,ScenarioToTriggerService,
     ScenarioTriggerTypeService, ScenarioTriggerService,JSFunctionService};
-export const APIS = [AuthenticationService, BaseclassesService, CategoriesService, ClazzService, CoreService,TriggerManagerService,
-    DebugService, DevicesService, DocumnetationService, DownloadService, DynamicPropertiesService,
-    LicenseService, MediaService, PluginsService, RolesService, SettingsService, TenantsService, TestService,TriggerManagerService,
-    UIPluginService, UploadService, 
-    UsersService, ViewsService,TokenBasedService,
+export const APIS = [TriggerManagerService,
     RulesService,RuleArgumentService,
     RuleToArgumentService,ScenarioService,ScenarioActionService,
     ScenarioToActionService,ScenarioToTriggerService,

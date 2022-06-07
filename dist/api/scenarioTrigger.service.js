@@ -9,8 +9,10 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScenarioTriggerService = void 0;
 const core_1 = require("@angular/core");
 const http_1 = require("@angular/common/http");
+const operators_1 = require("rxjs/operators");
 const variables_1 = require("../variables");
 const configuration_1 = require("../configuration");
 const flexicore_client_1 = require("@flexicore/flexicore-client");
@@ -61,7 +63,7 @@ let ScenarioTriggerService = class ScenarioTriggerService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).pipe(operators_1.map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o)));
     }
     fireTrigger(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -87,7 +89,7 @@ let ScenarioTriggerService = class ScenarioTriggerService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).pipe(operators_1.map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o)));
     }
     getAllScenarioTrigger(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -113,7 +115,7 @@ let ScenarioTriggerService = class ScenarioTriggerService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).pipe(operators_1.map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o)));
     }
     updateScenarioTrigger(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -139,12 +141,14 @@ let ScenarioTriggerService = class ScenarioTriggerService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).pipe(operators_1.map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o)));
     }
 };
 ScenarioTriggerService = __decorate([
     core_1.Injectable(),
-    __param(1, core_1.Optional()), __param(1, core_1.Inject(variables_1.BASE_PATH)), __param(2, core_1.Optional())
+    __param(1, core_1.Optional()),
+    __param(1, core_1.Inject(variables_1.BASE_PATH)),
+    __param(2, core_1.Optional())
 ], ScenarioTriggerService);
 exports.ScenarioTriggerService = ScenarioTriggerService;
 //# sourceMappingURL=scenarioTrigger.service.js.map

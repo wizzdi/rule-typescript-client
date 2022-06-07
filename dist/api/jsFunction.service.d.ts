@@ -1,6 +1,6 @@
 import { HttpClient, HttpEvent, HttpHeaders, HttpResponse } from "@angular/common/http";
 import { PaginationResponse } from "@flexicore/flexicore-client";
-import { Observable } from "rxjs/Observable";
+import { Observable } from "rxjs";
 import { Configuration } from "../configuration";
 import { JSFunctionCreate, JSFunctionFilter, JSFunctions, JSFunctionUpdate } from "../model/models";
 export declare class JSFunctionService {

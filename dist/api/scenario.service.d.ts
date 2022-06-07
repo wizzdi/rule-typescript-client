@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders, HttpResponse, HttpEvent } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { PaginationResponse } from '@flexicore/flexicore-client';
 import { Scenario } from '../model/scenario';
 import { ScenarioCreate } from '../model/scenarioCreate';

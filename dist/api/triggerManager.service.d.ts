@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders, HttpResponse, HttpEvent } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { PaginationResponse } from '@flexicore/flexicore-client';
 import { TriggerManager } from '../model/triggerManager';
 import { TriggerManagerCreate } from '../model/triggerManagerCreate';

@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders, HttpResponse, HttpEvent } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { EvaluateRuleRequest } from '../model/evaluateRuleRequest';
 import { EvaluateRuleResponse } from '../model/evaluateRuleResponse';
 import { FlexiCoreRule } from '../model/flexiCoreRule';

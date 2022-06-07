@@ -2,13 +2,10 @@ import {Inject, Injectable, Optional} from "@angular/core";
 import {HttpClient, HttpEvent, HttpHeaders, HttpResponse} from "@angular/common/http";
 import {Configuration} from "../configuration";
 import {BASE_PATH} from "../variables";
-import {
-    FlexiCoreRuleArgument,
-    RuleArgumentCreate,
-    RuleArgumentFilter,
-    RuleArgumentUpdate
-} from "..";
-import {Observable} from "rxjs/Observable";
+import {FlexiCoreRuleArgument,RuleArgumentCreate,RuleArgumentFilter,RuleArgumentUpdate} from "..";
+import {Observable} from "rxjs";
+import {map} from "rxjs/operators";
+
 import {FlexiCoreDecycle, PaginationResponse} from "@flexicore/flexicore-client";
 
 @Injectable()
@@ -87,7 +84,7 @@ export class RuleArgumentService {
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).map(o => FlexiCoreDecycle.retrocycle(o));
+        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
     }
 
     /**
@@ -135,7 +132,7 @@ export class RuleArgumentService {
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).map(o => FlexiCoreDecycle.retrocycle(o));
+        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
     }
 
     /**
@@ -183,7 +180,7 @@ export class RuleArgumentService {
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).map(o => FlexiCoreDecycle.retrocycle(o));
+        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
     }
 
 }

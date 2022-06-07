@@ -9,10 +9,12 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RuleArgumentService = void 0;
 const core_1 = require("@angular/core");
 const http_1 = require("@angular/common/http");
 const configuration_1 = require("../configuration");
 const variables_1 = require("../variables");
+const operators_1 = require("rxjs/operators");
 const flexicore_client_1 = require("@flexicore/flexicore-client");
 let RuleArgumentService = class RuleArgumentService {
     constructor(httpClient, basePath, configuration) {
@@ -61,7 +63,7 @@ let RuleArgumentService = class RuleArgumentService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).pipe(operators_1.map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o)));
     }
     getAllRuleArgument(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -87,7 +89,7 @@ let RuleArgumentService = class RuleArgumentService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).pipe(operators_1.map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o)));
     }
     updateRuleArgument(body, authenticationKey, observe = 'body', reportProgress = false) {
         let headers = this.defaultHeaders;
@@ -113,12 +115,14 @@ let RuleArgumentService = class RuleArgumentService {
             headers: headers,
             observe: observe,
             reportProgress: reportProgress
-        }).map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o));
+        }).pipe(operators_1.map(o => flexicore_client_1.FlexiCoreDecycle.retrocycle(o)));
     }
 };
 RuleArgumentService = __decorate([
     core_1.Injectable(),
-    __param(1, core_1.Optional()), __param(1, core_1.Inject(variables_1.BASE_PATH)), __param(2, core_1.Optional())
+    __param(1, core_1.Optional()),
+    __param(1, core_1.Inject(variables_1.BASE_PATH)),
+    __param(2, core_1.Optional())
 ], RuleArgumentService);
 exports.RuleArgumentService = RuleArgumentService;
 //# sourceMappingURL=ruleArgument.service.js.map
