@@ -10,20 +10,22 @@
  * Do not edit the class manually.
  *//* tslint:disable:no-unused-variable member-ordering */
 
-import { Inject, Injectable, Optional }                      from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams,
-         HttpResponse, HttpEvent }                           from '@angular/common/http';
+import { Inject, Injectable, Optional } from '@angular/core';
+import {
+    HttpClient, HttpHeaders,
+    HttpResponse, HttpEvent
+} from '@angular/common/http';
 
-import { Observable }                                        from 'rxjs';
-import { map }                                        from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { PaginationResponse, FlexiCoreDecycle } from '@flexicore/flexicore-client';
 import { ScenarioToAction } from '../model/scenarioToAction';
 import { ScenarioToActionCreate } from '../model/scenarioToActionCreate';
 import { ScenarioToActionUpdate } from '../model/scenarioToActionUpdate';
 
-import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
-import { Configuration }                                     from '../configuration';
+import { BASE_PATH, COLLECTION_FORMATS } from '../variables';
+import { Configuration } from '../configuration';
 import { ScenarioToActionFilter } from '../model/scenarioToActionFilter';
 
 
@@ -34,7 +36,7 @@ export class ScenarioToActionService {
     public defaultHeaders = new HttpHeaders();
     public configuration = new Configuration();
 
-    constructor(protected httpClient: HttpClient, @Optional()@Inject(BASE_PATH) basePath: string, @Optional() configuration: Configuration) {
+    constructor(protected httpClient: HttpClient, @Optional() @Inject(BASE_PATH) basePath: string, @Optional() configuration: Configuration) {
         if (basePath) {
             this.basePath = basePath;
         }
@@ -70,7 +72,7 @@ export class ScenarioToActionService {
     public createScenarioToAction(body?: ScenarioToActionCreate, authenticationKey?: string, observe?: 'body', reportProgress?: boolean): Observable<ScenarioToAction>;
     public createScenarioToAction(body?: ScenarioToActionCreate, authenticationKey?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<ScenarioToAction>>;
     public createScenarioToAction(body?: ScenarioToActionCreate, authenticationKey?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<ScenarioToAction>>;
-    public createScenarioToAction(body?: ScenarioToActionCreate, authenticationKey?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public createScenarioToAction(body?: ScenarioToActionCreate, authenticationKey?: string, observe: any = 'body', reportProgress: boolean = false): Observable<any> {
 
 
 
@@ -97,7 +99,7 @@ export class ScenarioToActionService {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
 
-        return this.httpClient.post<ScenarioToAction>(`${this.basePath}/plugins/ScenarioToAction/createScenarioToAction`,
+        return this.httpClient.post<ScenarioToAction>(`${this.basePath}/ScenarioToAction/createScenarioToAction`,
             body,
             {
                 withCredentials: this.configuration.withCredentials,
@@ -105,7 +107,7 @@ export class ScenarioToActionService {
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
+        ).pipe(map(o => FlexiCoreDecycle.retrocycle(o)));
     }
 
     /**
@@ -119,7 +121,7 @@ export class ScenarioToActionService {
     public getAllScenarioToAction(body?: ScenarioToActionFilter, authenticationKey?: string, observe?: 'body', reportProgress?: boolean): Observable<PaginationResponse<ScenarioToAction>>;
     public getAllScenarioToAction(body?: ScenarioToActionFilter, authenticationKey?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<PaginationResponse<ScenarioToAction>>>;
     public getAllScenarioToAction(body?: ScenarioToActionFilter, authenticationKey?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<PaginationResponse<ScenarioToAction>>>;
-    public getAllScenarioToAction(body?: ScenarioToActionFilter, authenticationKey?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public getAllScenarioToAction(body?: ScenarioToActionFilter, authenticationKey?: string, observe: any = 'body', reportProgress: boolean = false): Observable<any> {
 
 
 
@@ -146,7 +148,7 @@ export class ScenarioToActionService {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
 
-        return this.httpClient.post<PaginationResponse<ScenarioToAction>>(`${this.basePath}/plugins/ScenarioToAction/getAllScenarioToActions`,
+        return this.httpClient.post<PaginationResponse<ScenarioToAction>>(`${this.basePath}/ScenarioToAction/getAllScenarioToActions`,
             body,
             {
                 withCredentials: this.configuration.withCredentials,
@@ -154,7 +156,7 @@ export class ScenarioToActionService {
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
+        ).pipe(map(o => FlexiCoreDecycle.retrocycle(o)));
     }
 
     /**
@@ -168,7 +170,7 @@ export class ScenarioToActionService {
     public updateScenarioToAction(body?: ScenarioToActionUpdate, authenticationKey?: string, observe?: 'body', reportProgress?: boolean): Observable<ScenarioToAction>;
     public updateScenarioToAction(body?: ScenarioToActionUpdate, authenticationKey?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<ScenarioToAction>>;
     public updateScenarioToAction(body?: ScenarioToActionUpdate, authenticationKey?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<ScenarioToAction>>;
-    public updateScenarioToAction(body?: ScenarioToActionUpdate, authenticationKey?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public updateScenarioToAction(body?: ScenarioToActionUpdate, authenticationKey?: string, observe: any = 'body', reportProgress: boolean = false): Observable<any> {
 
 
 
@@ -195,7 +197,7 @@ export class ScenarioToActionService {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
 
-        return this.httpClient.put<ScenarioToAction>(`${this.basePath}/plugins/ScenarioToAction/updateScenarioToAction`,
+        return this.httpClient.put<ScenarioToAction>(`${this.basePath}/ScenarioToAction/updateScenarioToAction`,
             body,
             {
                 withCredentials: this.configuration.withCredentials,
@@ -203,7 +205,7 @@ export class ScenarioToActionService {
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
+        ).pipe(map(o => FlexiCoreDecycle.retrocycle(o)));
     }
 
 }

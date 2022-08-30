@@ -97,7 +97,7 @@ export class ScenarioActionService {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
 
-        return this.httpClient.post<ScenarioAction>(`${this.basePath}/plugins/ScenarioAction/createScenarioAction`,
+        return this.httpClient.post<ScenarioAction>(`${this.basePath}/ScenarioAction/createScenarioAction`,
             body,
             {
                 withCredentials: this.configuration.withCredentials,
@@ -146,7 +146,7 @@ export class ScenarioActionService {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
 
-        return this.httpClient.post<PaginationResponse<ScenarioAction>>(`${this.basePath}/plugins/ScenarioAction/getAllScenarioActions`,
+        return this.httpClient.post<PaginationResponse<ScenarioAction>>(`${this.basePath}/ScenarioAction/getAllScenarioActions`,
             body,
             {
                 withCredentials: this.configuration.withCredentials,
@@ -195,7 +195,7 @@ export class ScenarioActionService {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
 
-        return this.httpClient.put<ScenarioAction>(`${this.basePath}/plugins/ScenarioAction/updateScenarioAction`,
+        return this.httpClient.put<ScenarioAction>(`${this.basePath}/ScenarioAction/updateScenarioAction`,
             body,
             {
                 withCredentials: this.configuration.withCredentials,

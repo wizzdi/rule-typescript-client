@@ -1,10 +1,11 @@
 import { Baseclass } from '@flexicore/flexicore-client';
 import { Scenario } from './scenario';
 import { ScenarioTrigger } from './scenarioTrigger';
-import { TriggerManager } from './triggerManager';
 export interface ScenarioToTrigger extends Baseclass {
-    scenario?: Scenario;
+    firing?: boolean;
     scenarioTrigger?: ScenarioTrigger;
+    scenario?: Scenario;
+    ordinal?: number;
     enabled?: boolean;
-    triggerManager?: TriggerManager;
+    javaType?: string;
 }

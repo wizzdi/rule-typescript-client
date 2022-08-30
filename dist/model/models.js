@@ -62,8 +62,13 @@ __exportStar(require("./includeIds"), exports);
 __exportStar(require("./excludeIds"), exports);
 __exportStar(require("./scenarioTriggerType"), exports);
 __exportStar(require("./scenarioTriggerTypeFilter"), exports);
+__exportStar(require("./scenarioTriggerTypeCreate"), exports);
+__exportStar(require("./scenarioTriggerTypeUpdate"), exports);
 __exportStar(require("./jsFunction"), exports);
 __exportStar(require("./jsFunctionFilter"), exports);
 __exportStar(require("./jsFunctionCreate"), exports);
 __exportStar(require("./jsFunctionUpdate"), exports);
+__exportStar(require("./fireGenericTriggerRequest"), exports);
+__exportStar(require("./fireGenericTriggerResponse"), exports);
+__exportStar(require("./violation"), exports);
 //# sourceMappingURL=models.js.map

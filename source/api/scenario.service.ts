@@ -146,7 +146,7 @@ export class ScenarioService {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
 
-        return this.httpClient.post<Scenario>(`${this.basePath}/plugins/Scenario/createScenario`,
+        return this.httpClient.post<Scenario>(`${this.basePath}/Scenario/createScenario`,
             body,
             {
                 withCredentials: this.configuration.withCredentials,
@@ -195,7 +195,7 @@ export class ScenarioService {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
 
-        return this.httpClient.post<PaginationResponse<Scenario>>(`${this.basePath}/plugins/Scenario/getAllScenarios`,
+        return this.httpClient.post<PaginationResponse<Scenario>>(`${this.basePath}/Scenario/getAllScenarios`,
             body,
             {
                 withCredentials: this.configuration.withCredentials,
@@ -244,7 +244,7 @@ export class ScenarioService {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
 
-        return this.httpClient.put<Scenario>(`${this.basePath}/plugins/Scenario/updateScenario`,
+        return this.httpClient.put<Scenario>(`${this.basePath}/Scenario/updateScenario`,
             body,
             {
                 withCredentials: this.configuration.withCredentials,

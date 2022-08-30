@@ -10,19 +10,21 @@
  * Do not edit the class manually.
  *//* tslint:disable:no-unused-variable member-ordering */
 
-import { Inject, Injectable, Optional }                      from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams,
-         HttpResponse, HttpEvent }                           from '@angular/common/http';
+import { Inject, Injectable, Optional } from '@angular/core';
+import {
+    HttpClient, HttpHeaders,
+    HttpResponse, HttpEvent
+} from '@angular/common/http';
 
-import { Observable }                                        from 'rxjs';
-import { map }                                        from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { ScenarioTrigger } from '../model/scenarioTrigger';
 import { ScenarioTriggerCreate } from '../model/scenarioTriggerCreate';
 import { ScenarioTriggerUpdate } from '../model/scenarioTriggerUpdate';
 
-import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
-import { Configuration }                                     from '../configuration';
+import { BASE_PATH, COLLECTION_FORMATS } from '../variables';
+import { Configuration } from '../configuration';
 import { ScenarioTriggerFilter } from '../model/scenarioTriggerFilter';
 import { PaginationResponse, FlexiCoreDecycle } from '@flexicore/flexicore-client';
 import { FireScenarioTrigger } from '../model/fireScenarioTrigger';
@@ -35,7 +37,7 @@ export class ScenarioTriggerService {
     public defaultHeaders = new HttpHeaders();
     public configuration = new Configuration();
 
-    constructor(protected httpClient: HttpClient, @Optional()@Inject(BASE_PATH) basePath: string, @Optional() configuration: Configuration) {
+    constructor(protected httpClient: HttpClient, @Optional() @Inject(BASE_PATH) basePath: string, @Optional() configuration: Configuration) {
         if (basePath) {
             this.basePath = basePath;
         }
@@ -71,8 +73,7 @@ export class ScenarioTriggerService {
     public createScenarioTrigger(body?: ScenarioTriggerCreate, authenticationKey?: string, observe?: 'body', reportProgress?: boolean): Observable<ScenarioTrigger>;
     public createScenarioTrigger(body?: ScenarioTriggerCreate, authenticationKey?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<ScenarioTrigger>>;
     public createScenarioTrigger(body?: ScenarioTriggerCreate, authenticationKey?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<ScenarioTrigger>>;
-    public createScenarioTrigger(body?: ScenarioTriggerCreate, authenticationKey?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
-
+    public createScenarioTrigger(body?: ScenarioTriggerCreate, authenticationKey?: string, observe: any = 'body', reportProgress: boolean = false): Observable<any> {
 
 
         let headers = this.defaultHeaders;
@@ -98,7 +99,7 @@ export class ScenarioTriggerService {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
 
-        return this.httpClient.post<ScenarioTrigger>(`${this.basePath}/plugins/ScenarioTrigger/createScenarioTrigger`,
+        return this.httpClient.post<ScenarioTrigger>(`${this.basePath}/ScenarioTrigger/createScenarioTrigger`,
             body,
             {
                 withCredentials: this.configuration.withCredentials,
@@ -106,13 +107,13 @@ export class ScenarioTriggerService {
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
+        ).pipe(map(o => FlexiCoreDecycle.retrocycle(o)));
     }
 
     public fireTrigger(body?: FireScenarioTrigger, authenticationKey?: string, observe?: 'body', reportProgress?: boolean): Observable<void>;
     public fireTrigger(body?: FireScenarioTrigger, authenticationKey?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<void>>;
     public fireTrigger(body?: FireScenarioTrigger, authenticationKey?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<void>>;
-    public fireTrigger(body?: FireScenarioTrigger, authenticationKey?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public fireTrigger(body?: FireScenarioTrigger, authenticationKey?: string, observe: any = 'body', reportProgress: boolean = false): Observable<any> {
 
 
 
@@ -147,7 +148,7 @@ export class ScenarioTriggerService {
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
+        ).pipe(map(o => FlexiCoreDecycle.retrocycle(o)));
     }
 
     /**
@@ -161,8 +162,7 @@ export class ScenarioTriggerService {
     public getAllScenarioTrigger(body?: ScenarioTriggerFilter, authenticationKey?: string, observe?: 'body', reportProgress?: boolean): Observable<PaginationResponse<ScenarioTrigger>>;
     public getAllScenarioTrigger(body?: ScenarioTriggerFilter, authenticationKey?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<PaginationResponse<ScenarioTrigger>>>;
     public getAllScenarioTrigger(body?: ScenarioTriggerFilter, authenticationKey?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<PaginationResponse<ScenarioTrigger>>>;
-    public getAllScenarioTrigger(body?: ScenarioTriggerFilter, authenticationKey?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
-
+    public getAllScenarioTrigger(body?: ScenarioTriggerFilter, authenticationKey?: string, observe: any = 'body', reportProgress: boolean = false): Observable<any> {
 
 
         let headers = this.defaultHeaders;
@@ -188,7 +188,7 @@ export class ScenarioTriggerService {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
 
-        return this.httpClient.post<PaginationResponse<ScenarioTrigger>>(`${this.basePath}/plugins/ScenarioTrigger/getAllScenarioTriggers`,
+        return this.httpClient.post<PaginationResponse<ScenarioTrigger>>(`${this.basePath}/ScenarioTrigger/getAllScenarioTriggers`,
             body,
             {
                 withCredentials: this.configuration.withCredentials,
@@ -196,7 +196,7 @@ export class ScenarioTriggerService {
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
+        ).pipe(map(o => FlexiCoreDecycle.retrocycle(o)));
     }
 
     /**
@@ -210,8 +210,7 @@ export class ScenarioTriggerService {
     public updateScenarioTrigger(body?: ScenarioTriggerUpdate, authenticationKey?: string, observe?: 'body', reportProgress?: boolean): Observable<ScenarioTrigger>;
     public updateScenarioTrigger(body?: ScenarioTriggerUpdate, authenticationKey?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<ScenarioTrigger>>;
     public updateScenarioTrigger(body?: ScenarioTriggerUpdate, authenticationKey?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<ScenarioTrigger>>;
-    public updateScenarioTrigger(body?: ScenarioTriggerUpdate, authenticationKey?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
-
+    public updateScenarioTrigger(body?: ScenarioTriggerUpdate, authenticationKey?: string, observe: any = 'body', reportProgress: boolean = false): Observable<any> {
 
 
         let headers = this.defaultHeaders;
@@ -237,7 +236,7 @@ export class ScenarioTriggerService {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
 
-        return this.httpClient.put<ScenarioTrigger>(`${this.basePath}/plugins/ScenarioTrigger/updateScenarioTrigger`,
+        return this.httpClient.put<ScenarioTrigger>(`${this.basePath}/ScenarioTrigger/updateScenarioTrigger`,
             body,
             {
                 withCredentials: this.configuration.withCredentials,
@@ -245,7 +244,7 @@ export class ScenarioTriggerService {
                 observe: observe,
                 reportProgress: reportProgress
             }
-        ).pipe(map(o=>FlexiCoreDecycle.retrocycle(o)));
+        ).pipe(map(o => FlexiCoreDecycle.retrocycle(o)));
     }
 
 }

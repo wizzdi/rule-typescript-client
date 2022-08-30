@@ -1,6 +1,5 @@
-import { FilteringInformationHolder } from '@flexicore/flexicore-client';
-import { ScenarioFilter } from './scenarioFilter';
+import { BasicPropertiesFilter, FilteringInformationHolder } from '@flexicore/flexicore-client';
 export interface ScenarioActionFilter extends FilteringInformationHolder {
-    scenarioFilter?: ScenarioFilter;
-    connected?: boolean;
+    dynamicExecutionIds?: string[];
+    basicPropertiesFilter?: BasicPropertiesFilter;
 }

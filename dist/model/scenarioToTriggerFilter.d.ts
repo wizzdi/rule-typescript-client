@@ -1,6 +1,10 @@
-import { FilteringInformationHolder } from '@flexicore/flexicore-client';
+import { BasicPropertiesFilter, FilteringInformationHolder } from '@flexicore/flexicore-client';
 export interface ScenarioToTriggerFilter extends FilteringInformationHolder {
+    firing?: boolean;
+    scenarioIds?: string[];
+    scenarioTriggerIds?: string[];
+    basicPropertiesFilter?: BasicPropertiesFilter;
+    ordinal?: number[];
     enabled?: boolean;
-    scenarioTriggerIds?: Array<string>;
-    scenarioIds?: Array<string>;
+    nonDeletedScenarios?: boolean;
 }

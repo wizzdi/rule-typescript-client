@@ -58,7 +58,7 @@ let ScenarioToActionService = class ScenarioToActionService {
         if (httpContentTypeSelected != undefined) {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
-        return this.httpClient.post(`${this.basePath}/plugins/ScenarioToAction/createScenarioToAction`, body, {
+        return this.httpClient.post(`${this.basePath}/ScenarioToAction/createScenarioToAction`, body, {
             withCredentials: this.configuration.withCredentials,
             headers: headers,
             observe: observe,
@@ -84,7 +84,7 @@ let ScenarioToActionService = class ScenarioToActionService {
         if (httpContentTypeSelected != undefined) {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
-        return this.httpClient.post(`${this.basePath}/plugins/ScenarioToAction/getAllScenarioToActions`, body, {
+        return this.httpClient.post(`${this.basePath}/ScenarioToAction/getAllScenarioToActions`, body, {
             withCredentials: this.configuration.withCredentials,
             headers: headers,
             observe: observe,
@@ -110,7 +110,7 @@ let ScenarioToActionService = class ScenarioToActionService {
         if (httpContentTypeSelected != undefined) {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
-        return this.httpClient.put(`${this.basePath}/plugins/ScenarioToAction/updateScenarioToAction`, body, {
+        return this.httpClient.put(`${this.basePath}/ScenarioToAction/updateScenarioToAction`, body, {
             withCredentials: this.configuration.withCredentials,
             headers: headers,
             observe: observe,

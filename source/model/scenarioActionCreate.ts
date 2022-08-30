@@ -16,5 +16,5 @@ import { CreateDynamicExecution } from "@flexicore/flexicore-client";
 export interface ScenarioActionCreate { 
     name?: string;
     description?: string;
-    dynamicExecutionId:string;
+    dynamicExecutionId: string;
 }

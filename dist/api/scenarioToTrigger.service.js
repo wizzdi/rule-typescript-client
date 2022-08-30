@@ -58,7 +58,7 @@ let ScenarioToTriggerService = class ScenarioToTriggerService {
         if (httpContentTypeSelected != undefined) {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
-        return this.httpClient.post(`${this.basePath}/plugins/ScenarioToTrigger/createScenarioToTrigger`, body, {
+        return this.httpClient.post(`${this.basePath}/ScenarioToTrigger/createScenarioToTrigger`, body, {
             withCredentials: this.configuration.withCredentials,
             headers: headers,
             observe: observe,
@@ -84,7 +84,7 @@ let ScenarioToTriggerService = class ScenarioToTriggerService {
         if (httpContentTypeSelected != undefined) {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
-        return this.httpClient.post(`${this.basePath}/plugins/ScenarioToTrigger/getAllScenarioToTriggers`, body, {
+        return this.httpClient.post(`${this.basePath}/ScenarioToTrigger/getAllScenarioToTriggers`, body, {
             withCredentials: this.configuration.withCredentials,
             headers: headers,
             observe: observe,
@@ -110,7 +110,7 @@ let ScenarioToTriggerService = class ScenarioToTriggerService {
         if (httpContentTypeSelected != undefined) {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
-        return this.httpClient.put(`${this.basePath}/plugins/ScenarioToTrigger/updateScenarioToTrigger`, body, {
+        return this.httpClient.put(`${this.basePath}/ScenarioToTrigger/updateScenarioToTrigger`, body, {
             withCredentials: this.configuration.withCredentials,
             headers: headers,
             observe: observe,

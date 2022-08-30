@@ -1,13 +1,13 @@
 export interface ScenarioTriggerCreate {
     name?: string;
     description?: string;
-    tenantId?: string;
-    softDelete?: boolean;
-    validFrom?: string;
-    validTill?: string;
+    lastEventId?: string;
+    validFrom?: Date;
+    cooldownIntervalMs?: number;
+    logFileResourceId?: string;
+    validTill?: Date;
     scenarioTriggerTypeId?: string;
     evaluatingJSCodeId?: string;
-    activeMs?: bigint;
-    cooldownIntervalMs?: bigint;
-    eventCanonicalClassName?: string;
+    activeTill?: Date;
+    activeMs?: number;
 }

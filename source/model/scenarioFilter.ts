@@ -9,9 +9,13 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { FilteringInformationHolder } from '@flexicore/flexicore-client';
+import { BasicPropertiesFilter, FilteringInformationHolder } from '@flexicore/flexicore-client';
 
 
 
 export interface ScenarioFilter extends FilteringInformationHolder { 
+    basicPropertiesFilter?: BasicPropertiesFilter;
+    logFileResourceIds?: string[];
+    evaluatingJSCodeIds?: string[];
+    scenarioHint?: string[];
 }

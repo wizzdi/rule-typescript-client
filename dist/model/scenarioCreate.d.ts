@@ -1,7 +1,7 @@
 export interface ScenarioCreate {
     name?: string;
     description?: string;
-    ruleId?: string;
+    logFileResourceId?: string;
+    evaluatingJSCodeId?: string;
     scenarioHint?: string;
-    actionManagerScriptId?: string;
 }

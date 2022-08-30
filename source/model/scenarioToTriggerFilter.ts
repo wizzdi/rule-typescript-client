@@ -9,12 +9,16 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { FilteringInformationHolder } from '@flexicore/flexicore-client';
+import { BasicPropertiesFilter, FilteringInformationHolder } from '@flexicore/flexicore-client';
 
 
 
 export interface ScenarioToTriggerFilter extends FilteringInformationHolder { 
-    enabled?:boolean;
-    scenarioTriggerIds?:Array<string>;
-    scenarioIds?:Array<string>;
+    firing?: boolean;
+    scenarioIds?: string[];
+    scenarioTriggerIds?: string[];
+    basicPropertiesFilter?: BasicPropertiesFilter;
+    ordinal?: number[];
+    enabled?: boolean;
+    nonDeletedScenarios?: boolean;
 }

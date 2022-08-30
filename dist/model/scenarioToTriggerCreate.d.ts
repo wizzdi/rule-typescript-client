@@ -1,8 +1,9 @@
 export interface ScenarioToTriggerCreate {
     name?: string;
     description?: string;
+    scenarioTriggerId?: string;
     scenarioId?: string;
-    triggerId?: string;
     enabled?: boolean;
-    triggerManagerId?: string;
+    ordinal?: number;
+    firing?: boolean;
 }

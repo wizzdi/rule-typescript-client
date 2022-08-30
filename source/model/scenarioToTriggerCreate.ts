@@ -13,8 +13,9 @@
 export interface ScenarioToTriggerCreate { 
     name?: string;
     description?: string;
+    scenarioTriggerId?: string;
     scenarioId?: string;
-    triggerId?: string;
-    enabled?:boolean;
-    triggerManagerId?:string;
+    enabled?: boolean;
+    ordinal?: number;
+    firing?: boolean;
 }
