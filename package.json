@@ -29,6 +29,6 @@
     "zone.js": "^0.11.1"
   },
   "dependencies": {
-    "@flexicore/flexicore-client": "^3.0.15"
+    "@flexicore/flexicore-client": "^3.0.20"
   }
 }
