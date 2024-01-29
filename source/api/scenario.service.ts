@@ -96,7 +96,7 @@ export class ScenarioService {
            headers = headers.set('Content-Type', httpContentTypeSelected);
        }
 
-       return this.httpClient.post<void>(`${this.basePath}/plugins/Scenario/clearLog`,
+       return this.httpClient.post<void>(`${this.basePath}/ScenarioLog/clearLog`,
            body,
            {
                withCredentials: this.configuration.withCredentials,
