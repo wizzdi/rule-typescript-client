@@ -22,4 +22,5 @@ export interface ScenarioTriggerCreate {
     evaluatingJSCodeId?: string;
     activeTill?: Date;
     activeMs?: number;
+    timeZoneId?: string;
 }
