@@ -14,6 +14,7 @@ import { ScenarioTriggerType } from './scenarioTriggerType';
 
 export interface ScenarioTrigger extends Baseclass { 
     lastEventId?: string;
+    timeZoneId?: string;
     lastActivated?: Date;
     validFrom?: Date;
     cooldownIntervalMs?: number;
